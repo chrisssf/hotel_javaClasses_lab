@@ -15,4 +15,17 @@ public class Bedroom {
         this.guests = new ArrayList<Guest>();
     }
 
+    public void addGuest(Guest guest) {
+        if ( this.getTotalGuestsInRoom() == 0) {
+            this.guests.add(guest);
+        }
+    }
+
+    public int getTotalGuestsInRoom() {
+        return this.guests.size();
+    }
+
+    public void removeGuest(Guest guest) {
+        this.guests.remove(guest);
+    }
 }

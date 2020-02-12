@@ -9,4 +9,12 @@ public class Hotel {
         this.bedrooms = bedrooms;
         this.conferenceRooms = conferenceRooms;
     }
+
+    public int getBedrooms() {
+        return this.bedrooms.size();
+    }
+
+    public int getConferenceRooms() {
+        return this.conferenceRooms.size();
+    }
 }
