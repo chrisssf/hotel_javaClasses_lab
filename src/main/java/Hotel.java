@@ -1,3 +1,4 @@
+import java.awt.print.Book;
 import java.util.ArrayList;
 
 public class Hotel {
@@ -16,5 +17,14 @@ public class Hotel {
 
     public int getConferenceRooms() {
         return this.conferenceRooms.size();
+    }
+
+    public Booking bookRoom(Bedroom bedroom, Guest guest, int nightsBooked){
+        if (bedroom.checkRoomIsAvailable()) {
+            Booking booking = new Booking(bedroom, guest, nightsBooked);
+            bedroom.addGuest(guest);
+            return booking;
+        }
+        return null;
     }
 }
