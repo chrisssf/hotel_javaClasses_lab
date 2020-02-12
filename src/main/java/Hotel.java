@@ -27,4 +27,14 @@ public class Hotel {
         }
         return null;
     }
+
+    public ArrayList<Bedroom> getVacantRooms(){
+        ArrayList<Bedroom> vacantBedrooms = new ArrayList<Bedroom>();
+        for(Bedroom bedroom : this.bedrooms){
+            if (bedroom.checkRoomIsAvailable()){
+                vacantBedrooms.add(bedroom);
+            }
+        }
+        return vacantBedrooms;
+    }
 }
